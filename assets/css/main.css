@@ -261,6 +261,7 @@ header nav a i {
 .Main__Content-sc-dd34e3de-1.bfTLJe.es-main-content {
     /* border: solid 1px red; */
     margin: 2rem;
+    width: clamp(300px, 90%, 1000px);
 }
 
 .eapps-widget-toolbar {
