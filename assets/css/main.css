@@ -107,7 +107,7 @@ header .logo {
     width: 3rem;
     height: 3rem;
     display: block;
-    background-image: url(../img/icon_w.png);
+    background-image: url(../img/icon_w.PNG);
     background-position: 50% 50%;
     background-size: 100%;
 }
@@ -248,10 +248,24 @@ header nav a i {
 
 }
 
+#quienessomos .letters {
+    width: 100%;
+    margin: 0 auto;
+    display: block;
+    align-self: center;
+}
+
 
 .box {
     background-color: #fff;
     height: 100%;
+}
+
+
+.elfsight-app-c258c807-c999-48fa-acb4-990dd3b6d0b5.eapps-widget.eapps-widget-show-toolbar>a {
+    display: none !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
 }
 
 .WidgetTitle__Header-sc-581bc1ec-2.eqZPsd {
@@ -260,7 +274,7 @@ header nav a i {
 
 .Main__Content-sc-dd34e3de-1.bfTLJe.es-main-content {
     /* border: solid 1px red; */
-    margin: 2rem;
+    margin: 2rem auto;
     width: clamp(300px, 90%, 1000px);
 }
 
@@ -270,6 +284,22 @@ header nav a i {
 
 .WidgetBackground__Content-sc-52f57cce-2.ibnJBQ>a {
     display: none !important;
+}
+
+
+.EkQXg {
+    background: #fff !important;
+    box-shadow: 0 0 5px #0003 !important;
+    margin: 5px !important;
+}
+
+.boBlSx.es-header-component-top {
+    background: #fff !important;
+    box-shadow: 0 0 5px #0003 !important;
+}
+
+.cjDksG {
+    color: #fff !important;
 }
 
 .fundadores {

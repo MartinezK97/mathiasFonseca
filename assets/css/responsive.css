@@ -37,6 +37,16 @@
         margin: 0 auto;
     }
 
+    #quienessomos .gtc-2 {
+        grid-template-columns: 1fr;
+        /* max-width: 90%; */
+    }
+
+    #quienessomos .letters {
+        margin: 2rem auto;
+
+    }
+
     #contactos {
         grid-template-columns: 1fr;
     }
