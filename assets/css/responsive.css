@@ -1,0 +1,62 @@
+@media(width < 999px) {
+    header nav {
+        display: none;
+    }
+
+    #menu {
+        display: grid !important;
+    }
+
+    header .btn-menu {
+        display: block;
+        background: transparent;
+        border: none;
+        color: #fff;
+        font-size: 2rem;
+        max-width: min-content;
+        margin: auto 0 auto auto;
+        box-shadow: 0 0 25px -10px #0008;
+    }
+
+    #portada h1 {
+        font-size: 3rem;
+    }
+
+    #portada h3 {
+        font-size: 2rem;
+    }
+
+    #portada a {
+        font-size: 1.25rem;
+    }
+
+    #servicios .content-services {
+        grid-template-columns: 1fr;
+        max-width: 90%;
+        grid-gap: 6rem !important;
+        margin: 0 auto;
+    }
+
+    #contactos {
+        grid-template-columns: 1fr;
+    }
+
+    .instalacion .description,
+    .reparaciones .description {
+        margin-left: -3rem;
+    }
+
+    .mantenimiento .description,
+    .recargas .description {
+        margin-right: -3rem;
+    }
+
+
+}
+
+
+#why,
+#servicios {
+    max-width: 1000px;
+    margin: 0 auto;
+}

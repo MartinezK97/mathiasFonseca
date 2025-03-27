@@ -1,0 +1,18 @@
+/* #service_1,
+#service_3 {
+    transform: translateX(-1000px);
+}
+
+#service_2,
+#service_4 {
+    transform: translateX(1000px);
+}
+
+#servicios h1,
+#quienessomos h1,
+#contactos h1,
+#testimonios h1,
+#why h1 {
+    transform: translateY(100px);
+    opacity: 0;
+} */
