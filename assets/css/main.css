@@ -93,9 +93,9 @@ header * {
     color: #fff;
 }
 
-header i.logo {
+/* header i.logo {
     filter: brightness(0.5) INVERT(1);
-}
+} */
 
 header .home {
     grid-template-columns: 3rem auto;
