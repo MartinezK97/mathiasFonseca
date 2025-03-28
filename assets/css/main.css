@@ -346,7 +346,7 @@ header nav a i {
 
 #contactos article {
 
-    display: inline-block;
+    /* display: inline-block; */
     max-width: min-content;
     margin: 0 auto 2rem;
 }
@@ -362,7 +362,7 @@ header nav a i {
 
 #contactos p {
     font-weight: 700;
-    text-align: center;
+    font-size: 1.25rem;
 }
 
 #contactos a {
