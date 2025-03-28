@@ -4,6 +4,16 @@ $(document).ready(() => {
         $("#menu .btn-menu i").toggleClass('fa-bars fa-times')
     })
 
+    // Cerrar menú al hacer clic fuera
+    $(document).click(function (e) {
+        if (!$(e.target).closest('#menu').length && !$(e.target).closest('.btn-menu').length) {
+            if (!$("#menu").hasClass('hide')) {
+                $("#menu").addClass('hide');
+                $("#menu .btn-menu i").removeClass('fa-times').addClass('fa-bars');
+            }
+        }
+    });
+
 
     setTimeout(() => {
 

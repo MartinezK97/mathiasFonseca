@@ -439,6 +439,11 @@ header nav a i {
     width: 100%;
 }
 
+#footer svg {
+    position: absolute;
+    margin-top: -100px;
+}
+
 #footer {
     width: 100vw;
     backdrop-filter: blur(25px);
@@ -454,6 +459,8 @@ header nav a i {
     grid-gap: 1rem;
     transition: var(--transition);
     color: #fff;
+    z-index: 99999999;
+
 }
 
 #footer * {
@@ -463,13 +470,13 @@ header nav a i {
 #footer:after {
     content: "";
     width: 100%;
-    height: 200px;
+    height: 230px;
     background-image: url(../img/footer.svg);
     background-repeat: no-repeat;
     background-position: 0;
     background-size: cover;
     position: absolute;
-    top: -1rem;
+    top: -50px;
     left: 0;
     right: 0;
 }
