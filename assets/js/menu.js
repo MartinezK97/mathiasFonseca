@@ -16,7 +16,7 @@ $(document).ready(() => {
 
 
     setTimeout(() => {
-
+        $(".ButtonBase__Ellipsis-sc-11c179a3-5.haApKJ").text("Agregar reseña").css('color', '#ffffff')
         $(".EkQXg").css({
             'background': '#fff',
             'box-shadow': '0 0 5px #0003',

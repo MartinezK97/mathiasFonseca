@@ -1,6 +1,7 @@
 #menu {
     position: fixed;
     backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
     background-color: #0003;
     height: 100vh;
     right: 0;
