@@ -204,7 +204,7 @@ header nav a i {
     padding: 0;
     bottom: 1rem;
     display: block;
-    z-index: 9;
+    z-index: 99999999999;
     text-shadow: -1px -1px 1px #fff, 1px 1px 1px #fff;
 }
 
@@ -254,6 +254,33 @@ header nav a i {
     display: block;
     align-self: center;
 }
+
+#aireTotal {
+    width: clamp(300px, 100%, 700px);
+}
+
+
+#aireTotal_link {
+    display: block;
+    width: 300px;
+    height: 150px;
+    background-image: url(../img/AireTotalLogo.png);
+    background-size: 95%;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    margin: 0 auto;
+    background-color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
 
 
 .box {
@@ -453,14 +480,23 @@ header nav a i {
     background-image: linear-gradient(to bottom right, var(--primary-color), green);
     background-position: 0% 100%;
     padding: calc(200px + 1rem) 2rem 4rem;
-    display: grid;
+    /* display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-auto-rows: min-content;
-    grid-gap: 1rem;
+    grid-gap: 1rem; */
     transition: var(--transition);
     color: #fff;
     z-index: 99999999;
 
+}
+
+.content_footer {
+    /* border: solid 1px; */
+    margin-top: -3rem;
+}
+
+#footer #location {
+    width: 100%;
 }
 
 #footer * {
@@ -515,6 +551,8 @@ header nav a i {
 .horarios {
     grid-column: 2/3;
     grid-row: 1/3;
+    max-width: max-content;
+    margin: 0 auto;
 }
 
 .footer_footer {
@@ -526,4 +564,5 @@ header nav a i {
     width: 100%;
     padding: 0.75rem;
     text-align: center;
+    right: 0;
 }
