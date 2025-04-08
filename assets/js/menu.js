@@ -12,6 +12,11 @@ $(document).ready(() => {
                 $("#menu .btn-menu i").removeClass('fa-times').addClass('fa-bars');
             }
         }
+        // Si el clic fue en un enlace del menú (opción)
+        else if ($(e.target).closest('#menu a').length) {
+            $("#menu").addClass('hide');
+            $("#menu .btn-menu i").removeClass('fa-times').addClass('fa-bars');
+        }
     });
 
 
