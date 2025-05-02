@@ -28,7 +28,7 @@ integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+
 crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- Estilos Críticos Inline -->
-    <style>
+    <style fetchpriority="high">
     /* Critical CSS (1.2KB) */
     header{position:fixed;top:0;left:0;right:0;height:4rem;padding:0 1rem;background:#0005;backdrop-filter:blur(15px);-webkit-backdrop-filter:blur(15px);z-index:8}
     #portada{height:100vh;min-height:100vh;display:grid;align-items:center;text-align:center;color:#fff;text-shadow:0 0 10px #0004}
@@ -77,7 +77,7 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
     </section>
     <!-- MENU -->
     <section id="menu" class="hide box-shadow">
-        <button class="btn-menu maxw-max color-primary">
+        <button class="btn-menu maxw-max color-primary" title="Abrir menú desplazable">
             <i class="fa fa-bars"></i>
         </button></i>
         <a href="#portada" title="Ir a inicio"><i class="fa fa-home"></i> Inicio</a>
@@ -165,7 +165,10 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
                 necesidades
                 reales.
             </p>
-            <img src="./assets/img/letters.webp" class="letters" title="Mathías Fonseca" alt="Slogan Mathías Fonseca" loading="lazy">
+            <div class="letters">
+
+            </div>
+            <!-- <img src="./assets/img/letters.webp" class="letters" title="Mathías Fonseca" alt="Slogan Mathías Fonseca" loading="lazy"> -->
         </div>
     </section>
     <section id="aireTotal" class="mar-0-a pad-2 mar-bm-2">
