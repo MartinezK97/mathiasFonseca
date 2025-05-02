@@ -45,22 +45,22 @@
 }
 
 .instalacion .img {
-    background-image: url(../img/instalacion.webp);
+    background-image: url(../img/servicios/instalacion-290.webp);
     background-size: cover;
 }
 
 .mantenimiento .img {
-    background-image: url(../img/mantenimiento.webp);
+    background-image: url(../img/servicios/mantenimiento-290.webp);
     background-size: cover;
 }
 
 .reparaciones .img {
-    background-image: url(../img/reparacion.webp);
+    background-image: url(../img/servicios/reparacion-290.webp);
     background-size: cover;
 }
 
 .recargas .img {
-    background-image: url(../img/recargas.webp);
+    background-image: url(../img/servicios/recargas-290.webp);
     background-size: cover;
 }
 
