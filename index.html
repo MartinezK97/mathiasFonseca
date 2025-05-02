@@ -15,7 +15,7 @@
     <link rel="dns-prefetch" href="https://www.googletagmanager.com">
     
     <!-- Assets Locales -->
-    <link rel="preload" href="./assets/css/all.min.css" as="style">
+    <link rel="preload" href="./assets/css/all.min.css" as="style" onload="this.rel='stylesheet'">
     <link rel="preload" href="./assets/js/menu.js" as="script">
     <link rel="preload" href="./assets/img/servicios/instalacion-290.webp" as="image">
     <link rel="preload" href="./assets/img/servicios/mantenimiento-290.webp" as="image">
@@ -101,7 +101,9 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
     </style>
     
     <!-- Recursos Diferidos -->
-    <link rel="stylesheet" href="./assets/css/all.min.css" media="print" onload="this.media='all'">
+     <noscript>
+         <link rel="stylesheet" href="./assets/css/all.min.css" media="print" onload="this.media='all'">
+     </noscript>
     
     <!-- Favicon Moderno -->
     <link rel="icon" href="./assets/img/favicons/favicon.ico" sizes="any">
@@ -305,8 +307,8 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
             </article>
         </div>
     </section>
-    <div class="elfsight-app-c258c807-c999-48fa-acb4-990dd3b6d0b5" style="z-index: -1;" id="testimonios"></div>
-
+    <!-- <div class="elfsight-app-c258c807-c999-48fa-acb4-990dd3b6d0b5" style="z-index: -1;min-height: 100px;border:solid 1px red;width: 100%;" id="testimonios"></div> -->
+    <div id="testimonios-placeholder" style="height: 400px;width:100%;"></div>
     <div id="footer">
         <section class="content_footer dg gtc-2 gg-1">
             <article class="gr-1-3 mar-tp--1">
@@ -348,7 +350,7 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script defer async src="./assets/js/menu.js"></script>
 
     <!-- Elfsight Google Reviews | Untitled Google Reviews -->
-    <script defer src="https://static.elfsight.com/platform/platform.js" async  crossorigin="anonymous"></script>
+    <!-- <script defer src="https://static.elfsight.com/platform/platform.js" async  crossorigin="anonymous"></script> -->
 </body>
 
 </html>

@@ -77,5 +77,37 @@ document.addEventListener("DOMContentLoaded", function () {
             iframe.src = dataSrc;
         }
     }, 5000);
+
+
+
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    const placeholder = document.getElementById("testimonios-placeholder");
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // Crear el div con clase elfsight-app-...
+                const widgetDiv = document.createElement("div");
+                widgetDiv.className = "elfsight-app-c258c807-c999-48fa-acb4-990dd3b6d0b5";
+                widgetDiv.style.zIndex = "-1";
+                widgetDiv.id = "testimonios";
+                placeholder.replaceWith(widgetDiv);
+
+                // Cargar el script
+                const script = document.createElement("script");
+                script.src = "https://static.elfsight.com/platform/platform.js";
+                script.defer = true;
+                script.async = true;
+                script.crossOrigin = "anonymous";
+                document.body.appendChild(script);
+
+                observer.unobserve(placeholder);
+            }
+        });
+    }, { threshold: 0.1 });
+
+    observer.observe(placeholder);
 });
 
