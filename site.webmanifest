@@ -1,0 +1,21 @@
+{
+    "name": "Matías Fonseca |Aires Acondicionados",
+    "short_name": "Mathias AC",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#fff",
+    "icons": [
+      {
+        "src": "./assets/img/favicons/web-app-manifest-192x192.png",
+        "type": "image/png",
+        "sizes": "192x192"
+      },
+      {
+        "src": "./assets/img/favicons/web-app-manifest-512x512.png",
+        "type": "image/png",
+        "sizes": "512x512"
+      }
+    ]
+  }
+  

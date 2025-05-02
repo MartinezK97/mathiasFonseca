@@ -1,113 +1,25 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const btnMenu = document.querySelector(".btn-menu");
-    const menu = document.getElementById("menu");
-    const menuIcon = menu.querySelector(".btn-menu i");
+document.addEventListener("DOMContentLoaded",function(){let e=document.querySelector(".btn-menu"),t=document.getElementById("menu"),s=t.querySelector(".btn-menu i");e?.addEventListener("click",function(){t.classList.toggle("hide"),s.classList.toggle("fa-bars"),s.classList.toggle("fa-times")}),document.addEventListener("click",function(e){let a=!e.target.closest("#menu"),l=!e.target.closest(".btn-menu"),c=e.target.closest("#menu a");a&&l&&!t.classList.contains("hide")?(t.classList.add("hide"),s.classList.remove("fa-times"),s.classList.add("fa-bars")):c&&(t.classList.add("hide"),s.classList.remove("fa-times"),s.classList.add("fa-bars"))}),setTimeout(()=>{let e=document.querySelector(".ButtonBase__Ellipsis-sc-11c179a3-5.haApKJ");e&&(e.textContent="Agregar rese\xf1a",e.style.color="#ffffff"),document.querySelectorAll(".EkQXg").forEach(e=>{e.style.background="#fff",e.style.boxShadow="0 0 5px #0003",e.style.margin="5px"}),document.querySelectorAll(".dIBzjh").forEach(e=>{e.style.setProperty("background","#fff","important")});let t=document.querySelector(".elfsight-app-c258c807-c999-48fa-acb4-990dd3b6d0b5.eapps-widget.eapps-widget-show-toolbar > a");t&&(t.style.setProperty("display","none","important"),t.style.setProperty("opacity","0","important"))},4e3);let a=document.getElementById("location");if(a){let l=a.getAttribute("data-src"),c=new IntersectionObserver((e,t)=>{e.forEach(e=>{e.isIntersecting&&(console.log("Mapa en viewport, cargando..."),a.src=l,t.disconnect())})},{threshold:.1});c.observe(a),setTimeout(()=>{a.src||(console.log("Fallback activado, cargando mapa..."),a.src=l)},5e3)}let o=document.getElementById("testimonios-placeholder");if(o){let r=new IntersectionObserver((e,t)=>{e.forEach(e=>{if(e.isIntersecting){let s=document.createElement("div");s.className="elfsight-app-c258c807-c999-48fa-acb4-990dd3b6d0b5",s.style.zIndex="-1",s.id="testimonios",o.replaceWith(s);let a=document.createElement("script");a.src="https://static.elfsight.com/platform/platform.js",a.defer=!0,a.async=!0,a.crossOrigin="anonymous",document.body.appendChild(a),t.disconnect()}})},{threshold:.1});r.observe(o)}
+}); document.addEventListener('DOMContentLoaded', () => {
+    const header      = document.getElementById('header');
+    const portada     = document.getElementById('portada');
 
-    btnMenu.addEventListener("click", function () {
-        menu.classList.toggle("hide");
-        menuIcon.classList.toggle("fa-bars");
-        menuIcon.classList.toggle("fa-times");
+    // Altura sobre la que calculamos el porcentaje
+    const maxScroll = portada.offsetHeight - header.offsetHeight;
+
+    window.addEventListener('scroll', () => {
+      // Scroll actual, acotado entre 0 y maxScroll
+      const scrollY = Math.min(window.scrollY, maxScroll);
+      // Porcentaje (0–100)
+      const pct = (scrollY / maxScroll) * 100;
+      // Calculamos alpha en [0, 1]
+      let alpha = pct / 100;
+      // Si llega a 100%, forzamos alpha = 1
+      if (pct >= 100) alpha = 1;
+      // Convertir alpha a hexadecimal de 2 dígitos
+      const hex = Math.round(alpha * 255)
+                         .toString(16)
+                         .padStart(2, '0');
+      // Aplicar color con la parte alfa variable
+      header.style.backgroundColor = `#1f80cf${hex}`;
     });
-
-    document.addEventListener("click", function (e) {
-        const clickedOutsideMenu = !e.target.closest("#menu");
-        const clickedOutsideButton = !e.target.closest(".btn-menu");
-        const clickedLinkInsideMenu = e.target.closest("#menu a");
-
-        if (clickedOutsideMenu && clickedOutsideButton && !menu.classList.contains("hide")) {
-            menu.classList.add("hide");
-            menuIcon.classList.remove("fa-times");
-            menuIcon.classList.add("fa-bars");
-        } else if (clickedLinkInsideMenu) {
-            menu.classList.add("hide");
-            menuIcon.classList.remove("fa-times");
-            menuIcon.classList.add("fa-bars");
-        }
-    });
-
-    setTimeout(() => {
-        const ellipsisBtn = document.querySelector(".ButtonBase__Ellipsis-sc-11c179a3-5.haApKJ");
-        if (ellipsisBtn) {
-            ellipsisBtn.textContent = "Agregar reseña";
-            ellipsisBtn.style.color = "#ffffff";
-        }
-    
-        const ekqxgElements = document.querySelectorAll(".EkQXg");
-        ekqxgElements.forEach(el => {
-            el.style.background = "#fff";
-            el.style.boxShadow = "0 0 5px #0003";
-            el.style.margin = "5px";
-        });
-    
-        const dibzjhElements = document.querySelectorAll(".dIBzjh");
-        dibzjhElements.forEach(el => {
-            el.style.setProperty("background", "#fff", "important");
-        });
-    
-        const eappsLink = document.querySelector('.elfsight-app-c258c807-c999-48fa-acb4-990dd3b6d0b5.eapps-widget.eapps-widget-show-toolbar > a');
-        if (eappsLink) {
-            eappsLink.style.setProperty("display", "none", "important");
-            eappsLink.style.setProperty("opacity", "0", "important");
-        }
-    }, 4000);
-
-    
-})
-
-document.addEventListener("DOMContentLoaded", function () {
-    const iframe = document.getElementById("location");
-    const dataSrc = iframe.getAttribute('data-src');
-
-    const observer = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                console.log("Mapa en viewport, cargando...");
-                iframe.src = dataSrc;
-                observer.disconnect();
-            }
-        });
-    }, { threshold: 0.1 });
-
-    observer.observe(iframe);
-
-    // Fallback por si falla el observer
-    setTimeout(() => {
-        if (!iframe.src) {
-            console.log("Fallback activado, cargando mapa...");
-            iframe.src = dataSrc;
-        }
-    }, 5000);
-
-
-
-});
-
-document.addEventListener("DOMContentLoaded", function () {
-    const placeholder = document.getElementById("testimonios-placeholder");
-
-    const observer = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                // Crear el div con clase elfsight-app-...
-                const widgetDiv = document.createElement("div");
-                widgetDiv.className = "elfsight-app-c258c807-c999-48fa-acb4-990dd3b6d0b5";
-                widgetDiv.style.zIndex = "-1";
-                widgetDiv.id = "testimonios";
-                placeholder.replaceWith(widgetDiv);
-
-                // Cargar el script
-                const script = document.createElement("script");
-                script.src = "https://static.elfsight.com/platform/platform.js";
-                script.defer = true;
-                script.async = true;
-                script.crossOrigin = "anonymous";
-                document.body.appendChild(script);
-
-                observer.unobserve(placeholder);
-            }
-        });
-    }, { threshold: 0.1 });
-
-    observer.observe(placeholder);
-});
-
+  });

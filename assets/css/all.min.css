@@ -2180,7 +2180,7 @@ nav a.dot-red:before {
     position: fixed;
     backdrop-filter: blur(25px);
     -webkit-backdrop-filter: blur(25px);
-    background-color: #0003;
+    background-color: #1f80cf30;
     height: 100vh;
     right: 0;
     top: 0;
@@ -2213,9 +2213,9 @@ nav a.dot-red:before {
 }
 
 #menu a {
-    color: #fff;
+    color: 000;
     position: relative;
-    border-bottom: solid 1px #fff3;
+    border-bottom: solid 1px #0001;
     padding: 0.75rem 0;
 }
 
@@ -2385,7 +2385,7 @@ header nav a i {
     font-weight: 400;
     color: #fff;
     margin: 0;
-    font-size: 4rem;
+    font-size: 3rem;
 }
 
 #portada h3 {
@@ -2907,7 +2907,7 @@ header nav a i {
     }
 
     #portada h1 {
-        font-size: 3rem;
+        font-size: 2.25rem;
     }
 
     #portada h3 {
