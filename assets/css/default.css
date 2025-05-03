@@ -212,41 +212,6 @@ html {
 }
 
 
-
-.loadBox {
-    animation: loadBox 10s ease-in-out infinite;
-}
-
-@keyframes loadBox {
-    0% {
-        background-image: linear-gradient(to bottom right, var(--box-bg-t1), var(--box-bg-t1), var(--box-bg-t1));
-    }
-
-    2% {
-        background-image: linear-gradient(to bottom right, var(--box-bg-t1-invert), var(--box-bg-t1), var(--box-bg-t1));
-    }
-
-    4% {
-        background-image: linear-gradient(to bottom right, var(--box-bg-t1), var(--box-bg-t1-invert), var(--box-bg-t1));
-    }
-
-    6% {
-        background-image: linear-gradient(to bottom right, var(--box-bg-t1), var(--box-bg-t1), var(--box-bg-t1-invert));
-    }
-
-    8% {
-        background-image: linear-gradient(to bottom right, var(--box-bg-t1), var(--box-bg-t1), var(--box-bg-t1));
-    }
-
-    10% {
-        background-image: linear-gradient(to bottom right, var(--box-bg-t1), var(--box-bg-t1), var(--box-bg-t1));
-    }
-
-    100% {
-        background-image: linear-gradient(to bottom right, var(--box-bg-t1), var(--box-bg-t1), var(--box-bg-t1));
-    }
-}
-
 .content-all {
     position: fixed;
     overflow: visible;

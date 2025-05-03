@@ -3,91 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#ffffff"> <!-- Nuevo: Color para PWA -->
     
-    <!-- Meta Tags Optimizados -->
-    <title>Instalación de Aires Acondicionados en Montevideo | Mathías Fonseca</title>
-    <meta name="description" content="✔ Servicio profesional de instalación y reparación de aire acondicionado. Técnicos certificados, respuesta rápida y garantía en Montevideo. ¡Solicite presupuesto gratis!">
-    <meta name="keywords" content="instalador aire acondicionado Montevideo, reparación AC, mantenimiento, servicio técnico climatización, recarga gas refrigerante">
+    <!-- SEO Mejorado -->
+    <title>Instalación y Reparación de Aires Acondicionados en Montevideo | Mathías Fonseca</title>
+    <meta name="description" content="✅ Servicio técnico especializado en instalación, mantenimiento y reparación de aires acondicionados en Montevideo. Técnicos certificados, respuesta en 24h y garantía por escrito. ¡Presupuesto gratuito!">
+    <meta name="keywords" content="instalación aire acondicionado Montevideo, reparación AC, mantenimiento climatización, servicio técnico autorizado, recarga gas refrigerante, urgencias aire acondicionado 24 horas">
     
-    <!-- Preconexiones y Preloads -->
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com/ajax/libs">
+    <!-- Preconexiones Estratégicas -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
     <link rel="dns-prefetch" href="https://www.googletagmanager.com">
-    
-    <!-- Assets Locales -->
-    <link rel="preload" href="./assets/css/all.min.css" as="style" onload="this.rel='stylesheet'">
-    <link rel="preload" href="./assets/js/menu.js" as="script">
+
+    <!-- CSS Crítico Inline -->
+    <style>
+        /* Estilos esenciales para First Paint */
+        body{font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;margin:0;line-height:1.6}
+        .header{position:fixed;top:0;width:100%;z-index:1000;background:#fff;box-shadow:0 2px 5px rgba(0,0,0,0.1)}
+        .menu-toggle{display:block;padding:15px} /* Solo estilos críticos */
+    </style>
+
+    <!-- CSS No Crítico (Optimizado) -->
+    <link rel="preload" href="./assets/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="./assets/css/all.min.css"></noscript>
+
+    <!-- Preload de Recursos Clave -->
+    <link rel="preload" href="./assets/js/menu.js" as="script" fetchpriority="high">
     <link rel="preload" href="./assets/img/servicios/instalacion-290.webp" as="image">
-    <link rel="preload" href="./assets/img/servicios/mantenimiento-290.webp" as="image">
-    <link rel="preload" href="./assets/img/servicios/recargas-290.webp" as="image">
-    <link rel="preload" href="./assets/img/servicios/reparacion-290.webp" as="image">
-    <!-- Vanta -->
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js" as="script" crossorigin>
-    <link rel="preload" href="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.fog.min.js" as="script" crossorigin>
-    <script>
-        // Carga los recursos críticos primero
-        (function() {
-            const resources = [
-                'https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js',
-                'https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.fog.min.js'
-            ];
-        
-            const loadResource = (url) => {
-                const link = document.createElement('link');
-                link.rel = 'preload';
-                link.as = 'script';
-                link.href = url;
-                link.crossOrigin = 'anonymous';
-                document.head.appendChild(link);
-                return new Promise(resolve => {
-                    link.onload = resolve;
-                });
-            };
-        
-            Promise.all(resources.map(loadResource))
-                .then(() => {
-                    const threeScript = document.createElement('script');
-                    threeScript.src = resources[0];
-                    threeScript.crossOrigin = 'anonymous';
-                    document.head.appendChild(threeScript);
-                    
-                    threeScript.onload = () => {
-                        const vantaScript = document.createElement('script');
-                        vantaScript.src = resources[1];
-                        vantaScript.crossOrigin = 'anonymous';
-                        document.head.appendChild(vantaScript);
-                        
-                        vantaScript.onload = () => {
-                            const effect = VANTA.FOG({
-                                el: "#portada",
-                                mouseControls: true,
-                                touchControls: true,
-                                gyroControls: false,
-                                minHeight: 200,
-                                minWidth: 200,
-                                highlightColor: 0xfff,
-                                midtoneColor: 0xf1ff,
-                                lowlightColor: 0xffd0,
-                                speed: 2.5
-                            });
-                            document.getElementById('portada').style.opacity = '1';
-                        };
-                    };
-                });
-        })();
-        </script>
-        
-        <!-- 4. Prioridad de renderizado -->
-        <script defer>
-        // Posterga otros recursos no críticos
-        window.addEventListener('load', () => {
-            requestIdleCallback(() => {
-                // Carga otros scripts aquí
-            }, { timeout: 500 });
-        });
-        </script>
-    <!-- Iconos -->
-    <link rel="stylesheet" defer href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Optimización de Scripts -->
+   
+    <script defer src="./assets/js/three.js" crossorigin></script>
+    <script defer src="./assets/js/vanta.js" crossorigin></script>
+
+    <!-- Font Awesome (Optimizado) -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"></noscript>
+
+    <!-- Inicialización Diferida de Efectos -->
+  
 
     <!-- Estilos Críticos Inline -->
     <style fetchpriority="high">
@@ -128,7 +82,7 @@
 
     #portada{
         height:100vh;
-        min-height:100vh;
+        height:100vh;
         display:grid;
         align-items:center;
         text-align:center;
@@ -159,10 +113,7 @@
     }
     </style>
     
-    <!-- Recursos Diferidos -->
-     <noscript>
-         <link rel="stylesheet" href="./assets/css/all.min.css" media="print" onload="this.media='all'">
-     </noscript>
+   
     
     <!-- Favicon Moderno -->
     <link rel="icon" href="./assets/img/favicons/favicon.ico" sizes="any">
@@ -319,7 +270,7 @@
         <div class="dg gg-1 maxw-max mar-0-a mar-tp-2 fundadores">
 
             <article class="persona  box box-shadow br-10 dg gtc-a-a gg-1 pad-1">
-                <img src="./assets/img/matias.webp" title="Foto de Mathías" class="mar-tp-2 box-shadow border-light" alt="Foto de Mathías" loading="lazy">
+                <img src="./assets/img/matias.webp" decoding="async" title="Foto de Mathías" class="mar-tp-2 box-shadow border-light" alt="Foto de Mathías" loading="lazy">
                 <div class="ta-left as-center">
                     <p class="mar-0 mar-tp-1 ta-left minw-max">Mathías Fonseca</p>
                     <span class="db mar-bm-1">Especialista</span>
@@ -393,7 +344,7 @@
                 href="http://github.com/MartinezK97/" title="Contactar al desarrollador" target="_blank" rel="noopener noreferrer">Kevin Martínez</a>
         </div>
     </div>
-    <!-- Carga Controlada de Three.js/Vanta.js -->
+
 
     
     <!-- Google Analytics Optimizado -->
@@ -403,10 +354,30 @@
     ga('send', 'pageview');
     </script>
     <script async src="https://www.google-analytics.com/analytics.js"></script>
+    <script defer data-priority="low">
+        window.addEventListener('DOMContentLoaded', () => {
+            // if('requestIdleCallback' in window) {
+            //     requestIdleCallback(initVantaEffect, { timeout: 2000 });
+            // } else {
+            //     setTimeout(initVantaEffect, 2000);
+            // }
     
+                VANTA.FOG({
+                    el: "#portada",
+                    mouseControls: true,
+                    touchControls: true,
+                    minHeight: 200,
+                    minWidth: 200,
+                    highlightColor: 0xfff,
+                    midtoneColor: 0xf1ff,
+                    lowlightColor: 0xffd0,
+                    speed: 2.5
+                });
+        });
+        </script>
     <!-- Scripts Finales -->
-    <script defer async src="./assets/js/menu.js"></script>
-
+    <script async src="./assets/js/all.min.js"></script>
+ <!-- Iconos -->
     <!-- Elfsight Google Reviews | Untitled Google Reviews -->
     <!-- <script defer src="https://static.elfsight.com/platform/platform.js" async  crossorigin="anonymous"></script> -->
 </body>

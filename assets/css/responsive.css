@@ -19,7 +19,7 @@
     }
 
     #portada h1 {
-        font-size: 3rem;
+        font-size: 2rem;
     }
 
     #portada h3 {
@@ -60,15 +60,10 @@
     .recargas .description {
         margin-right: -3rem;
     }
-
-
     .content_footer {
         grid-template-columns: 1fr !important;
     }
-
 }
-
-
 #why,
 #servicios {
     max-width: 1000px;
