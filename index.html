@@ -29,7 +29,6 @@
     <noscript><link rel="stylesheet" href="./assets/css/all.min.css"></noscript>
 
     <!-- Preload de Recursos Clave -->
-    <link rel="preload" href="./assets/js/all.min.js" as="script" fetchpriority="high">
     <link rel="preload" href="./assets/img/servicios/instalacion-290.webp" as="image">
     <link rel="preload" href="./assets/img/servicios/mantenimiento-290.webp" as="image">
     <link rel="preload" href="./assets/img/servicios/recargas-290.webp" as="image">
@@ -39,6 +38,7 @@
     <!-- Optimización de Scripts -->
     <link rel="preload" href="./assets/js/three.js" as="script" crossorigin="anonymous">
     <link rel="preload" href="./assets/js/vanta.js" as="script" crossorigin="anonymous">
+    <link rel="preload" href="./assets/js/all.min.js" as="script" crossorigin="anonymous">
     <script defer src="./assets/js/three.js" crossorigin></script>
     <script defer src="./assets/js/vanta.js" crossorigin></script>
     <script defer src="./assets/js/all.min.js"></script>
@@ -109,6 +109,8 @@
             align-items:center;
             text-align:center;
             color:#fff;
+            background-image: url(./assets/img/portada.webp);
+            background-size: cover;
         }
         #portada h1{
             font-weight:700;
