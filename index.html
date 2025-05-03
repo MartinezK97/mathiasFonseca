@@ -28,7 +28,7 @@
     <noscript><link rel="stylesheet" href="./assets/css/all.min.css"></noscript>
 
     <!-- Preload de Recursos Clave -->
-    <link rel="preload" href="./assets/js/menu.js" as="script" fetchpriority="high">
+    <link rel="preload" href="./assets/js/all.min.js" as="script" fetchpriority="high">
     <link rel="preload" href="./assets/img/servicios/instalacion-290.webp" as="image">
 
     <!-- Optimización de Scripts -->
@@ -39,78 +39,187 @@
     <!-- Font Awesome (Optimizado) -->
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"></noscript>
-
-    <!-- Inicialización Diferida de Efectos -->
   
-
     <!-- Estilos Críticos Inline -->
     <style fetchpriority="high">
+        *{
+            box-sizing:border-box;
+        }
+        body{
+            margin:0;
+            padding:0;
+        }
         a{
             color:inherit;
             text-decoration:none;
         }
-    header{
-        position:fixed;
-        top:0;
-        left:0;
-        right:0;
-        height:4rem;
-        padding:0 1rem;
-        background:#03407230;
-        backdrop-filter:blur(15px);
-        -webkit-backdrop-filter:blur(15px);
-        z-index:8
-    }
-    header .home {
-        grid-template-columns: 3rem auto;
-        font-weight: 700;
-        font-size: 1.75rem;
-    }
-    header .logo {
-        width: 3rem;
-        height: 3rem;
-        display: block;
-        background-image: url(./assets/img/icon_w_32x32.webp);
-        background-position: 50% 50%;
-        background-size: 100%;
-    }
+    @media(width < 999px){
 
-    header .home a{
-        font-size:1.75rem;
-        color:#fff;
-    }
+        header{
+            position:fixed;
+            top:0;
+            left:0;
+            right:0;
+            height:4rem;
+            padding:0 1rem;
+            background:#03407290;
+            backdrop-filter:blur(5px);
+            -webkit-backdrop-filter:blur(5px);
+            z-index:8;
+            color:#fff;
+        }
+        header .home {
+            grid-template-columns: 3rem auto;
+            font-weight: 700;
+            font-size: 1.75rem;
+        }
+        header .logo {
+            width: 3rem;
+            height: 3rem;
+            display: block;
+            background-image: url(./assets/img/icon_w_32x32.webp);
+            background-position: 50% 50%;
+            background-size: 100%;
+        }
 
-    #portada{
-        height:100vh;
-        height:100vh;
-        display:grid;
-        align-items:center;
-        text-align:center;
-        color:#fff;
+        header .home a{
+            font-size:1.75rem;
+            color:#fff;
+        }
+
+        #portada{
+            height:100vh;
+            height:100vh;
+            display:grid;
+            align-items:center;
+            text-align:center;
+            color:#fff;
+        }
+        #portada h1{
+            font-weight:700;
+            padding:0 1.5rem;
+        }
+        #portada h1 span{
+            font-size:1rem;
+        }
+
+        #portada a{
+        font-size: 1.25rem;
+        border-radius: 100px;
+        max-width: max-content;
+        margin: 2rem auto 0;
+        color: #fff;
+        padding: 1rem 2rem;
+        box-shadow: 0 0 15px -5px #0007;
+        transition: var(--transition);
+        background:#0b5709;
+        }
+        .logo{width:3rem;
+            height:3rem;
+            background:url(./assets/img/icon_w_32x32.webp) center/cover
+        }
+        #fixed-wpp-button{position:fixed;
+            right:2rem;
+            bottom:1rem;
+            z-index:99999999999
+        }
+        #menu.hide{
+            transform:translateX(100%);
+        }
+
+        #portada h1 span{
+            font-size:1.5rem;
+        }
     }
-    #portada a{
-    font-size: 1.25rem;
-    border-radius: 100px;
-    max-width: max-content;
-    margin: 2rem auto 0;
-    color: #fff;
-    padding: 1rem 2rem;
-    border: solid 1px;
-    box-shadow: 0 0 15px -5px #0007;
-    transition: var(--transition);
-    }
-    .logo{width:3rem;
-        height:3rem;
-        background:url(./assets/img/icon_w_32x32.webp) center/cover
-    }
-    #fixed-wpp-button{position:fixed;
-        right:2rem;
-        bottom:1rem;
-        z-index:99999999999
-    }
-    #menu.hide{
-        transform:translateX(100%);
-    }
+    @media(width > 999px){
+
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    height:4rem;
+    padding:0 1rem;
+    background:#03407290;
+    backdrop-filter:blur(5px);
+    -webkit-backdrop-filter:blur(5px);
+    z-index:8;
+    color:#fff;
+}
+header nav a{
+    font-size:1.5rem;
+}
+header nav a{
+    font-size:1.5rem;
+    grid-gap:1rem;
+}
+header nav a i{
+    font-size:1.25rem;
+}
+
+header .home {
+    grid-template-columns: 3rem auto;
+    font-weight: 700;
+    font-size: 1.75rem;
+}
+header .logo {
+    width: 3rem;
+    height: 3rem;
+    display: block;
+    background-image: url(./assets/img/icon_w_32x32.webp);
+    background-position: 50% 50%;
+    background-size: 100%;
+}
+
+header .home a{
+    font-size:1.75rem;
+    color:#fff;
+}
+
+#portada{
+    height:100vh;
+    height:100vh;
+    display:grid;
+    align-items:center;
+    text-align:center;
+    color:#fff;
+}
+#portada h1{
+    font-weight:700;
+    max-width:850px;
+    margin:0 auto;
+}
+#portada h1 span{
+    font-size:2.5rem;
+}
+
+#portada a{
+font-size: 1.25rem;
+border-radius: 100px;
+max-width: max-content;
+margin: 2rem auto 0;
+color: #fff;
+padding: 1rem 2rem;
+border: solid 1px;
+box-shadow: 0 0 15px -5px #0007;
+transition: var(--transition);
+background:#058001;
+}
+.logo{width:3rem;
+    height:3rem;
+    background:url(./assets/img/icon_w_32x32.webp) center/cover
+}
+#fixed-wpp-button{position:fixed;
+    right:2rem;
+    bottom:1rem;
+    z-index:99999999999
+}
+#menu.hide{
+    transform:translateX(100%);
+}
+
+
+}
     </style>
     
    
@@ -140,12 +249,11 @@
 
     <!-- PORTADA DEL SITIO -->
     <section id="portada" fetchpriority="high">
-        <h1>
-            <span class="fw-6">Instalador</span>
-            de<br> <span class="fw-6">AIRES ACONDICIONADOS</span><br>
-             <span class="fw-6">en Montevideo.</span>
+        <h1 class="fw-6">
+            Instalación y Reparación de AIRES ACONDICIONADOS en Montevideo<br><br>
+           <span>Presupuestos sin costo</span>
         </h1>
-        <h3>Tu <span class="fw-6">comodidad</span> es<br>nuestra <span class="fw-6">prioridad</span>.</h3>
+        <!-- <h3>Tu <span class="fw-6">comodidad</span> es<br>nuestra <span class="fw-6">prioridad</span>.</h3> -->
         <a class="wpp fz-1-25"
             href="https://wa.me/+59894746115?text=Hola,%20me%20gustar%C3%ADa%20solicitar%20presupuesto" title="Contáctame via WhatsApp"><i class="fab fa-whatsapp"></i> Contactanos ahora</a>
     </section>
@@ -270,7 +378,7 @@
         <div class="dg gg-1 maxw-max mar-0-a mar-tp-2 fundadores">
 
             <article class="persona  box box-shadow br-10 dg gtc-a-a gg-1 pad-1">
-                <img src="./assets/img/matias.webp" decoding="async" title="Foto de Mathías" class="mar-tp-2 box-shadow border-light" alt="Foto de Mathías" loading="lazy">
+                <img src="./assets/img/mathias-120.webp" decoding="async" title="Foto de Mathías" class="mar-tp-2 box-shadow border-light" alt="Foto de Mathías" loading="lazy">
                 <div class="ta-left as-center">
                     <p class="mar-0 mar-tp-1 ta-left minw-max">Mathías Fonseca</p>
                     <span class="db mar-bm-1">Especialista</span>
@@ -377,9 +485,6 @@
         </script>
     <!-- Scripts Finales -->
     <script async src="./assets/js/all.min.js"></script>
- <!-- Iconos -->
-    <!-- Elfsight Google Reviews | Untitled Google Reviews -->
-    <!-- <script defer src="https://static.elfsight.com/platform/platform.js" async  crossorigin="anonymous"></script> -->
 </body>
 
 </html>
