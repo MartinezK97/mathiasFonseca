@@ -4,17 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <meta name="theme-color" content="#ffffff"> <!-- Nuevo: Color para PWA -->
 
     <!-- SEO Mejorado -->
-    <title>Instalación y Reparación de Aires Acondicionados</title>
+    <title>Instalación y Reparación de Aire Acondicionado | Mathías Fonseca</title>
     <meta name="description"
-        content="✅ Servicio técnico especializado en instalación, mantenimiento y reparación de aires acondicionados en Montevideo. Técnicos certificados, respuesta en 24h y garantía por escrito. ¡Presupuesto gratuito!">
+        content="✅ Servicio técnico especializado en instalación, mantenimiento y reparación de aires acondicionados en Montevideo. ✅Técnicos certificados, respuesta en 24h.✅ ¡Presupuesto gratuito!">
     <meta name="keywords"
-        content="instalación aire acondicionado Montevideo, reparación aire acondicionado, mantenimiento preventivo aire acondicionado, servicio técnico aire acondicionado, técnico especializado aire acondicionado, limpieza de filtros aire acondicionado, recarga de gas refrigerante, mini split inverter Montevideo, aire acondicionado 18000 BTU, reparación aire acondicionado que no enfría">
+        content="instalación aire acondicionado Montevideo, reparación aire acondicionado, mantenimiento preventivo aire acondicionado, servicio técnico aire acondicionado, técnico especializado aire acondicionado, limpieza de filtros aire acondicionado, recarga de gas refrigerante, mini split inverter Montevideo, aire acondicionado 18000 BTU, reparación aire acondicionado que no enfría, Dobarro y Pichel, Ingenieros Tugentman, AyC Refrigeración">
     <meta name="google-site-verification" content="_5PE7USCrUdZ3cSBg4UCuB8dnfVM9cEYDoEePAHFGks" />
+    
     <!-- Preconexiones Estratégicas -->
-     <!-- Optimización de Scripts -->
+     
+    <!-- Optimización de Scripts -->
      <link rel="preload" href="./assets/js/three.js" as="script" crossorigin="anonymous">
      <link rel="preload" href="./assets/js/vanta.js" as="script" crossorigin="anonymous">
      <link rel="preload" href="./assets/js/all.min.js" as="script" crossorigin="anonymous">
@@ -53,12 +54,10 @@
         * {
             box-sizing: border-box;
         }
-
         body {
             margin: 0;
             padding: 0;
         }
-
         a {
             color: inherit;
             text-decoration: none;
@@ -226,6 +225,8 @@
                 align-items: center;
                 text-align: center;
                 color: #fff;
+                background-image: url(./assets/img/portada.webp);
+                background-size: cover
             }
 
             #portada h1 {
@@ -274,7 +275,7 @@
     <meta name="robots" content="index, follow">
     <meta name="googlebot" content="index, follow">
     <meta name="google" content="notranslate">
-
+    <meta name="contact" content="WhatsApp:+59894746115">
     <!-- Favicon Moderno -->
     <link rel="icon" href="./assets/img/favicons/favicon.ico" sizes="any">
     <link rel="apple-touch-icon" href="./assets/img/favicons/apple-touch-icon.png">
@@ -288,8 +289,15 @@
           "url": "https://mathiasfonseca.uy",
           "logo": "https://mathiasfonseca.uy/assets/img/favicons/favicon.ico",
           "image": [
-            "https://mathiasfonseca.uy/assets/img/mathias.webp"
+            "https://mathiasfonseca.uy/assets/img/servicios/instalacion-290.webp"
           ],
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "contactType": "Customer Service",
+            "telephone": "+59894746115",
+            "url": "https://wa.me/+59894746115",
+            "contactOption":"WhatsApp"
+          },
           "telephone": "+59894746115",
           "email": "mathfonseca1@hotmail.com",
           "address": {
@@ -372,8 +380,8 @@
             "itemListElement": [
               {
                 "@type": "Offer",
-                "name": "Descuento en compra de equipos en AireTotal",
-                "description": "Beneficios especiales al adquirir equipos de aire acondicionado con nosotros."
+                "name": "¿Necesitas un equipo nuevo?",
+                "description": "Comprando en AireTotal, te hacemos un descuento en la instalación."
               }
             ]
           },
@@ -636,12 +644,6 @@
     <script async src="https://www.google-analytics.com/analytics.js"></script>
     <script defer data-priority="low">
         window.addEventListener('DOMContentLoaded', () => {
-            // if('requestIdleCallback' in window) {
-            //     requestIdleCallback(initVantaEffect, { timeout: 2000 });
-            // } else {
-            //     setTimeout(initVantaEffect, 2000);
-            // }
-
             VANTA.FOG({
                 el: "#portada",
                 mouseControls: true,
